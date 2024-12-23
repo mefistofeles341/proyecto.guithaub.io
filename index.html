@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clínica Salud Vida</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> <!-- Fuente más detallada -->
+
+    <style>
+      /* Estilos CSS */
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        background-image: url("fondo.jpeg"); /* Aquí coloca la URL de tu imagen de fondo */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      header {
+  background-color: #0c5215;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+header .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  width: 180px; /* Ajusta el tamaño del logo según sea necesario */
+  height: auto;
+  margin-right: 1rem; /* Espaciado entre el logo y el título */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 4rem; /* Aumenta el tamaño del título */
+  font-family: 'Playfair Display', serif; /* Aplica la nueva fuente */
+  font-weight: bold; /* Resalta el texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agrega sombra para un efecto de resalto */
+}
+      .social-media-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .social-media-header a img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .social-media-header a img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+      }
+
+      main {
+        padding: 2rem;
+        text-align: center;
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      .services h2 {
+        color: #4caf50;
+        margin-bottom: 1rem;
+      }
+
+      .service-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        justify-items: center;
+        padding: 0;
+      }
+
+      .service-box img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .service-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0;
+      }
+
+      .service-box div {
+        padding: 1rem;
+      }
+
+      .service-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      footer p {
+        margin: 0;
+      }
+      .service-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Asegura que el contenido comience desde la parte superior */
+        aspect-ratio: 1 / 1;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0;
+        padding: 0;
+        position: relative; /* Permite posicionar elementos dentro de la caja */
+      }
+
+      .service-box div {
+        font-size: 1.2rem; /* Tamaño de fuente más grande */
+        font-weight: bold; /* Hacer el texto más destacado */
+        color: #4caf50; /* Color verde para resaltar */
+        text-align: center; /* Centrar el texto */
+        padding: 0.5rem 1rem; /* Espaciado superior e inferior */
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Fondo translúcido para mejorar visibilidad */
+        position: absolute; /* Coloca el nombre en la parte superior */
+        top: 0; /* Asegura que el texto esté en la parte superior */
+        left: 0;
+        right: 0;
+        border-radius: 8px 8px 0 0; /* Bordes redondeados solo arriba */
+      }
+
+      .service-box img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0 0 8px 8px; /* Bordes redondeados solo abajo */
+        margin-top: 40px; /* Espacio para asegurar que la imagen no se sobreponga con el texto */
+      }
+
+      .service-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo-container">
+          <img src="logo.png" alt="Logo Clínica Salud Vida" class="logo" />
+        </div>
+        <h1>CLINICA SAGRADA FAMILIA</h1>
+        <div class="social-media-header">
+          <a href="https://facebook.com" target="_blank" title="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+          </a>
+          <a href="https://twitter.com" target="_blank" title="Twitter">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png" alt="Twitter" />
+          </a>
+          <a href="https://instagram.com" target="_blank" title="Instagram">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
+          </a>
+        </div>
+      </header>
+      
+
+    <!-- Sección de Servicios -->
+    <main>
+      <section class="services">
+        <h2>Nuestros Servicios</h2>
+        <br /><br /><br /><br />
+        <div class="service-list">
+          <a href="medicina-general.html" class="service-box">
+            <img src="image006.png" alt="Medicina General" />
+            <div>Medicina General</div>
+          </a>
+          <a href="traumatologia.html" class="service-box">
+            <img src="image012.png" alt="Traumatología" />
+            <div>Traumatología</div>
+          </a>
+          <a href="ginecologia.html" class="service-box">
+            <img src="image002.png" alt="Ginecología" />
+            <div>Ginecología</div>
+          </a>
+          <a href="laboratorio.html" class="service-box">
+            <img src="image004.png" alt="Laboratorio" />
+            <div>Laboratorio</div>
+          </a>
+          <a href="neurologia.html" class="service-box">
+            <img src="image008.png" alt="Neurología" />
+            <div>Neurología</div>
+          </a>
+          <a href="farmacia.html" class="service-box">
+            <img src="image010.png" alt="Farmacia" />
+            <div>Farmacia</div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+      <p>&copy; 2024 Clínica Salud Vida. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
